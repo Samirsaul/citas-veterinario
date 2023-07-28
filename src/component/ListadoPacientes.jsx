@@ -9,11 +9,13 @@ const ListadoPacientes = ({ pacientes, setEditar, eliminarPaciente }/*PASANDP PO
     //EL METODO DE ARRIBA NO ESTA EN EL VIDEO DEL CURSO REACT, EL METODO DE ARRIBA ES PROPIO
     return (
 
-        <div className="mt-10 md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
-            <h2 className="font-black text-3xl text-center">{llenoVacio}</h2>
-            <p className="text-xl mt-5 mb-10 text-center">{administra}{""}
+        <div className="  mt-10 md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+            <div className="sticky top-0 color bg-gray-200">
+            <h2 className=" font-black text-3xl text-center">{llenoVacio}</h2>
+            <p className=" text-xl mt-5 mb-10 text-center">{administra}{""}
                 <span className="text-indigo-600 font-bold">{citas}</span>
             </p>
+            </div> 
 
             {pacientes.map(pacientes => (
                 <Paciente
@@ -23,8 +25,6 @@ const ListadoPacientes = ({ pacientes, setEditar, eliminarPaciente }/*PASANDP PO
                     eliminarPaciente={eliminarPaciente}
                 />)
             )}
-
-
         </div>
     )
 }
